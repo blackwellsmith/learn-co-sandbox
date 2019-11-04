@@ -1,0 +1,33 @@
+<h1>Signup</h1>
+
+<%= "An error occured and could not be saved. Please see below and try again" if @user && @user.errors.any? %>
+
+<% if @user && @user.errors.any? %>
+  <% @user.errors.full_messages.each do |msg| %>
+    <ul> <%= msg %> </ul>
+  <% end %>
+<% end %>
+
+<form action="/users" method="POST">
+  <p>
+    <label for="email">Email:</label><br>
+    <input type="text" name="email" id="email" >
+  </p>
+  <p>
+    <label for="password">Password:</label><br>
+    <input type="password" name="password" id="password" >
+  </p>
+  <p>
+      <label for="First Name">First Name:</label><br>
+      <input type="text" name="first_name" id="first_name" >
+    </p>
+    <p>
+      <label for="Last Name">Last Name:</label><br>
+      <input type="text" name="last_name" id="last_name" >
+    </p>
+    <p>
+      <label for="Zip Code">Zip Code:</label><br>
+      <input type="integer" name="zip_code" id="zip_code" >
+    </p>
+  <input type="submit">
+</form>

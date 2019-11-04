@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>All Movie List</title>
+</head>
+<body>
+    <h1>All Movie List</h1>
+    <p>A list of all the movies watched and collected from all the users in this database!</p>
+    <form action="/signup" method="GET">
+      <p>New Account? <input type="submit" value="Signup"></p>
+    </form>
+    <form action="/login" method="GET">
+      <p>Already have an account? <input type="submit" value="Login"></p>
+    </form>
+
+    <ul>
+        <% @movies.each do |movie| %>
+            <li><%= movie.title %></li>
+        <% end %>
+        Wall-E
+    </ul>
+</body>
+</html>

@@ -1,0 +1,23 @@
+<h1>Movie Database Collector</h1>
+<h3>Login</h3>
+<!-- <p>Please enter your login information below </p> -->
+<%= "Must include email and password. Please try again" if @user && @user.errors.any? %>
+
+<form action="/sessions" method="POST"> <!-- Attempt to login with existing user acct -->
+  <p>
+    <label for="email">Email:</label><br>
+    <input type="text" name="email" id="email"/>
+  </p>
+  <p>
+    <label for="password">Password:</label><br>
+    <input type="password" name="password" id="password"/>
+  </p>
+  <input type="submit" />
+</form>
+<br>
+<form action="/signup" method="GET"> <!-- Create new user acct -->
+  <p>
+    <label for="signup">Need to make a new account?</label>
+    <input type="submit" value="Signup">
+  </p>
+</form>

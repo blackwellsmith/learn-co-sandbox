@@ -1,0 +1,20 @@
+<h1>Movies</h1>
+<h3>
+  Currently logged in as: <%= current_user.email %><br>
+  User ID #: <%= current_user.id %><br>
+</h3>
+
+<form action="/logout" method="GET">
+  <p>Not your account? <input type="submit" value="Sign Out"></p>
+</form>
+
+<h4>This is the current list of Movies which you have watched:</h4>
+
+<h4>Would you like to update your list of watched movies?</h4>
+<form action="/movies/add" method="GET">
+  <p>Add to your list? <input type="submit" value="Add Movie"></p>
+</form>
+
+<form action="/remove" method="GET">
+  <p>Remove from your list? <input type="submit" value="Remove Movie"></p>
+</form>
